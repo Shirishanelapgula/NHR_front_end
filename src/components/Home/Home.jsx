@@ -16,7 +16,7 @@ const HomePage= ()=>{
     const getProducts = async ()=>{
         try{
 
-            const stateData = await axios.get("http://localhost:5000/test/state/get")
+            const stateData = await axios.get("https://nhr-backend.onrender.com/test/state/get")
             setProducts(stateData.data)
             
 
@@ -27,7 +27,7 @@ const HomePage= ()=>{
 
     const getTasks = async ()=>{
         try{
-            const taskData = await axios.get("http://localhost:5000/test/task/get")
+            const taskData = await axios.get("https://nhr-backend.onrender.com/test/task/get")
             setTasks(taskData.data)
             // console.log(taskData.data)
             // const task=[{id:1,assignedTo:"shirisha",taskStatus:"Open",category:"Bug"},{id:2,assignedTo:"shirisha",taskStatus:"Inprogress",category:"Bug"}]

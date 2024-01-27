@@ -15,7 +15,7 @@ const Addtask=(props)=>{
 
     const addTaskToApi= async (data)=>{
         try{
-            await axios.post("http://localhost:5000/test/task/add",data)
+            await axios.post("https://nhr-backend.onrender.com/test/task/add",data)
         }
         catch(error){
             console.log(error.message)
@@ -24,7 +24,7 @@ const Addtask=(props)=>{
 
     const getState= async ()=>{
         try{
-            const statePresent = await axios.get("http://localhost:5000/test/state/get")
+            const statePresent = await axios.get("https://nhr-backend.onrender.com/test/state/get")
             statePresentState(statePresent.data)
             console.log(statePresent.data)
         }

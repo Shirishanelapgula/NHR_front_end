@@ -12,7 +12,7 @@ const Addstate=(props)=>{
 
     const addStateToApi= async (stateName)=>{
         try{
-            await axios.post("http://localhost:5000/test/state/add",{stateName})
+            await axios.post("https://nhr-backend.onrender.com/test/state/add",{stateName})
         }
         catch(error){
             console.log(error.message)
