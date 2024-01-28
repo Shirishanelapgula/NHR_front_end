@@ -18,9 +18,12 @@ export const Button=styled.button`
     align-self: flex-end;
     margin:10px;
     color:black;
+    background-color:white;
 `
 export const StatesContainer= styled.div`
     display: flex;
+    width:100vw;
+    overflow:auto;
 `
 export const ButtonsContainer= styled.div`
     display: flex;

@@ -17,6 +17,7 @@ export const TaskCard=styled.div`
 export const Para=styled.p`
     font-size:20px;
     font-family:"Roboto"
+    color:black;
 `
 
 export const Container =styled.div`
