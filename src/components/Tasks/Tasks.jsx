@@ -1,6 +1,3 @@
-import { useState } from "react"
-import {useNavigate} from "react-router-dom"
-
 import {TaskCard,Para,Container} from "./styledComponent.js"
 
 const Task=(props)=>{

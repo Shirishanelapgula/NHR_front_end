@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import {useNavigate} from "react-router-dom"
 import axios from "axios"
 
+import { BACKEND_URL } from "../../App"
+
 import {Editcontainer,Card,InputForm,TextInput,Button,Title,Label,Select,Option} from "./styledComponent.js"
 
 const Addtask=(props)=>{
@@ -15,7 +17,8 @@ const Addtask=(props)=>{
 
     const addTaskToApi= async (data)=>{
         try{
-            await axios.post("https://nhr-backend.onrender.com/test/task/add",data)
+            await axios.post(`${BACKEND_URL}/test/task/add`,data)
+            navigate("/")
         }
         catch(error){
             console.log(error.message)
@@ -24,9 +27,9 @@ const Addtask=(props)=>{
 
     const getState= async ()=>{
         try{
-            const statePresent = await axios.get("https://nhr-backend.onrender.com/test/state/get")
+            const statePresent = await axios.get(`${BACKEND_URL}/test/state/get`)
             statePresentState(statePresent.data)
-            console.log(statePresent.data)
+
         }
         catch(error){
             console.log(error.message)
@@ -44,7 +47,6 @@ const Addtask=(props)=>{
     const taskSubmitFn=(event)=>{
         event.preventDefault()
         callSetDataFn()
-        navigate("/")
     }
 
     useEffect(()=>{

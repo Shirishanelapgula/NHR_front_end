@@ -1,9 +1,11 @@
 import { useEffect, useState} from "react";
-import {Link , useNavigate} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 
 import axios from "axios"
 
 import State from "../State/State";
+import { BACKEND_URL } from "../../App";
+
 import {Maincontainer,Button,StatesContainer ,ButtonsContainer} from "./styledComponent.js"
 
 
@@ -13,10 +15,12 @@ const HomePage= ()=>{
     const [Products , setProducts]= useState([])
     const [Tasks,setTasks]=useState([])
 
+    console.log(BACKEND_URL)
+
     const getProducts = async ()=>{
         try{
 
-            const stateData = await axios.get("https://nhr-backend.onrender.com/test/state/get")
+            const stateData = await axios.get(`${BACKEND_URL}/test/state/get`)
             setProducts(stateData.data)
             
 
@@ -27,7 +31,7 @@ const HomePage= ()=>{
 
     const getTasks = async ()=>{
         try{
-            const taskData = await axios.get("https://nhr-backend.onrender.com/test/task/get")
+            const taskData = await axios.get(`${BACKEND_URL}/test/task/get`)
             setTasks(taskData.data)
             // console.log(taskData.data)
             // const task=[{id:1,assignedTo:"shirisha",taskStatus:"Open",category:"Bug"},{id:2,assignedTo:"shirisha",taskStatus:"Inprogress",category:"Bug"}]

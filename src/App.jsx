@@ -1,12 +1,13 @@
-import { useState } from 'react'
 import {Routes,Route} from "react-router-dom"
 import Home from "./components/Home/Home"
-import Sample from "./components/State/State"
 import Addstate from "./components/Addstate/Addstate"
 import  AddTask from "./components/AddTask/AddTask"
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import {Maincontainer} from './styledComponent.js'
+
+
+export const BACKEND_URL = "https://nhr-backend.onrender.com"
+
+console.log(BACKEND_URL)
 
 function App() {
   return (
