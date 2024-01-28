@@ -39,10 +39,10 @@ export const Button= styled.button`
     border-color:grey;
     height:50px;
     width:100px;
-    background-color:#e1e6e2;
     margin-top:20px;
     align-self:center;
     background-color:white;
+    color:black;
 `
 
 export const TextInput = styled.input`
