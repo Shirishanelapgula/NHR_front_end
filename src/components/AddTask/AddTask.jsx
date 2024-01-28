@@ -66,7 +66,7 @@ const Addtask=(props)=>{
                 <Label>
                     Enter Task Status
                 </Label>
-                <Select id="selectOptions" defaultValue="Open" onChange={(e)=>editTaskStatus(e.target.value)}>
+                <Select id="selectOptions" onChange={(e)=>editTaskStatus(e.target.value)}>
                     {presentStates.map((each)=>(<Option key={each._id} value={each.stateName}>{each.stateName}</Option>))}
 
                 </Select>
