@@ -74,10 +74,13 @@ export const Select = styled.select`
     width:260px;
     height:45px;
     align-self:center;
+    color:black;
+    background-color:white;
 
 `
 
 export const Option = styled.option`
-    font-family:"Roboto"
+    font-family:"Roboto";
+    color:black;
 
 `

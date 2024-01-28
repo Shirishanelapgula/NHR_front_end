@@ -39,7 +39,7 @@ export const Button= styled.button`
     border-color:grey;
     height:50px;
     width:100px;
-    background-color:#e1e6e2;
+    background-color:white;
     margin-top:20px;
     align-self:center;
     color:black;
