@@ -42,18 +42,22 @@ export const Button= styled.button`
     background-color:#e1e6e2;
     margin-top:20px;
     align-self:center;
+    color:black;
 `
 
 export const TextInput = styled.input`
     width:250px;
     height:40px;
     align-self:center;
+    color:black;
+    background-color:white;
 
 `
 
 export const Title= styled.h1`
     font-size:20px;
     text-align:center;
+    color:black;
 
 `
 
@@ -61,4 +65,5 @@ export const Label=styled.label`
     font-size:20px;
     text-align:left;
     padding-left:20px;
+    color:black;
 `

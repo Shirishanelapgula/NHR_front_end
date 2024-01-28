@@ -11,12 +11,13 @@ export const TaskCard=styled.div`
     border-radius:10px;
     border-color:grey;
     margin:10px;
-    padding:10px
+    padding:10px;
+    color:black;
 `
 
-export const Para=styled.p`
+export const Para = styled.p`
     font-size:20px;
-    font-family:"Roboto"
+    font-family:"Roboto";
     color:black;
 `
 
