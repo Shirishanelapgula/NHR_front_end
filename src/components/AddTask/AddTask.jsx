@@ -14,6 +14,12 @@ const Addtask=(props)=>{
     const [category ,editCategory]=useState("")
     const [presentStates, statePresentState]=useState([])
 
+
+    const updateTaskStatus = (event)=>{
+        console.log(event.target.value)
+        editTaskStatus(event.target.value)
+    }
+
     const addTaskToApi= async (taskData)=>{
         try{
             console.log(taskData)
@@ -66,7 +72,7 @@ const Addtask=(props)=>{
                 <Label>
                     Enter Task Status
                 </Label>
-                <Select id="selectOptions" onChange={(e)=>editTaskStatus(e.target.value)}>
+                <Select onChange={updateTaskStatus}>
                     {presentStates.map((each)=>(<Option key={each._id} value={each.stateName}>{each.stateName}</Option>))}
 
                 </Select>
