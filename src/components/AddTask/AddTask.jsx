@@ -10,7 +10,7 @@ const Addtask=(props)=>{
     const navigate = useNavigate()
 
     const [assignedTo ,setTaskAssignedTo]=useState("")
-    const [taskStatus ,editTaskStatus]=useState("")
+    const [taskStatus ,editTaskStatus]=useState("Open")
     const [category ,editCategory]=useState("")
     const [presentStates, statePresentState]=useState([])
 
