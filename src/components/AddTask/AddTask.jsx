@@ -12,12 +12,12 @@ const Addtask=(props)=>{
     const [assignedTo ,setTaskAssignedTo]=useState("")
     const [taskStatus ,editTaskStatus]=useState("")
     const [category ,editCategory]=useState("")
-    const [taskData ,setTaskData] = useState({})
     const [presentStates, statePresentState]=useState([])
 
-    const addTaskToApi= async (data)=>{
+    const addTaskToApi= async (taskData)=>{
         try{
-            await axios.post(`${BACKEND_URL}/test/task/add`,data)
+            console.log(taskData)
+            await axios.post(`${BACKEND_URL}/test/task/add`,taskData)
             navigate("/")
         }
         catch(error){
@@ -38,10 +38,8 @@ const Addtask=(props)=>{
     }
 
     const callSetDataFn=()=>{
-        const data = {assignedTo:assignedTo,taskStatus:taskStatus,category:category}
-        console.log(taskStatus)
-        setTaskData(data)
-        addTaskToApi(data)
+        const taskData = {assignedTo:assignedTo,taskStatus:taskStatus,category:category}
+        addTaskToApi(taskData)
     }
 
     const taskSubmitFn=(event)=>{
@@ -52,8 +50,6 @@ const Addtask=(props)=>{
     useEffect(()=>{
         getState()
     },[])
-
-    console.log(taskStatus)
 
 
     // const {id,assignedTo,taskStatus,category} = data
