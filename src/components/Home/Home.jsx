@@ -13,7 +13,6 @@ const HomePage= ()=>{
     const navigate =useNavigate()
 
     const [Products , setProducts]= useState([])
-    const [Tasks,setTasks]=useState([])
 
     console.log(BACKEND_URL)
 
@@ -29,20 +28,6 @@ const HomePage= ()=>{
         }
     }
 
-    const getTasks = async ()=>{
-        try{
-            const taskData = await axios.get(`${BACKEND_URL}/test/task/get`)
-            setTasks(taskData.data)
-            // console.log(taskData.data)
-            // const task=[{id:1,assignedTo:"shirisha",taskStatus:"Open",category:"Bug"},{id:2,assignedTo:"shirisha",taskStatus:"Inprogress",category:"Bug"}]
-            // setTasks(task)
-
-        }catch(error){
-            console.log(error)
-        }
-    }
-
-
     const onAddProduct=()=>{
         navigate("/edit")
     }
@@ -57,10 +42,6 @@ const HomePage= ()=>{
     getProducts();
  },[])
 
- useEffect(()=>{
-    getTasks()
- },[])
-
     return(
         <Maincontainer className="container">
           <ButtonsContainer>
@@ -72,7 +53,7 @@ const HomePage= ()=>{
                 return (
                 <div key = {item._id}>
 
-                   {<State key = {item._id} item = {item} tasks={Tasks}/>}
+                   {<State key = {item._id} item = {item} />}
 
                 </div>)
 
